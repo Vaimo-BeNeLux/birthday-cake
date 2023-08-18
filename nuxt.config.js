@@ -1,4 +1,7 @@
 export default {
+  nitro: {
+    preset: 'firebase'
+},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'birthday-app',
@@ -36,5 +39,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  
 }

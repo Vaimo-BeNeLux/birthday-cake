@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "site": "cake-force",
+    "public": "dist",
+    "cleanUrls": true,
+    "rewrites": [{ "source": "**", "function": "server" }],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

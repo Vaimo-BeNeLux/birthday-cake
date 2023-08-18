@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "serve": "npm run build && firebase emulators:start --only functions"
   },
   "dependencies": {
     "core-js": "^3.19.3",
@@ -17,9 +18,12 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.1",
+    "firebase-functions-test": "^3.1.0",
     "sass": "^1.66.0"
   },
   "engines": {
-    "node": "^18.16.0"
+    "node": "^16.0"
   }
 }
