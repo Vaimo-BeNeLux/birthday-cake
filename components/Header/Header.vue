@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .header {
-    margin: 0 auto;
+    margin: 0 auto 50px;
     padding: 25px;
     width: 100%;
     max-width: 1200px;

@@ -1,7 +1,7 @@
 <template>
     <div class="login-form">
-        <form :onsubmit="handleSubmit">
-            <input class="password-input" type="password" placeholder="PASSWORD" />
+        <form @submit="handleSubmit">
+            <input v-model="password" class="password-input" type="password" placeholder="PASSWORD" />
             <button type="submit">Enter the Cake Factory</button>
         </form>
     </div>
@@ -9,11 +9,36 @@
 <script>
 export default {
     name: 'LoginForm',
-    methods: {
-        handleSubmit() {
-            
+    data() {
+        return {
+          accessPassword: 'vaimo',
+          password: ''
         }
     },
+    methods: {
+        checkPassword(password) {
+          // TODO: has to be replaced with env var or Backend password check
+          return password === this.accessPassword;
+        },
+        handleSubmit(e) {
+          e.preventDefault();
+          if(this.checkPassword(this.password)) {
+            localStorage.setItem('user-token', this.password);
+            window.location.href = '/generator';
+            //this.$router.push('/generator');
+          } else {
+            alert('Invalid password');
+          }
+          this.password = '';
+        }
+    },
+    mounted() {
+      const userToken = localStorage.getItem('user-token');
+      console.log('dd', userToken,this.checkPassword(userToken))
+      if(this.checkPassword(userToken)) {
+        window.location.href = '/generator';
+      }
+    }
 }
 </script>
 <style lang="css">
