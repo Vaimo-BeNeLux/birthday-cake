@@ -47,8 +47,9 @@ export default {
     margin: 0 auto;
     padding: 25px;
     width: 100%;
+    max-width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .header__nav {

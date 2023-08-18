@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <img class="vaimo-logo" src="../assets/images/vaimo-logo-light.svg" />
+    <Header />
     <div class="form">
       <img class="app-logo" src="../assets/images/App Logo.svg" />
       <LoginForm />
@@ -12,9 +12,10 @@
 <script>
 import LoginForm from '../components/Forms/LoginForm.vue';
 import Footer from '../components/Footer/Footer.vue';
+import Header from '../components/Header/Header.vue';
 export default {
   name: 'IndexPage',
-  components: {LoginForm, Footer}
+  components: {LoginForm, Footer, Header}
 }
 </script>
 
@@ -23,8 +24,18 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.header {
+  justify-content: flex-end!important;
+}
+.header__nav {
+  display:none!important;
+}
 .form {
   align-self: center;
   height: 85vh;
+}
+.app-logo {
+  width: 300px;
+  margin: 30px 0;
 }
 </styles>
