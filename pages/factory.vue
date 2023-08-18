@@ -14,7 +14,7 @@ import GeneratedImages from "../components/GeneratedImages/GeneratedImages.vue";
 import Generator from "../components/Generator/Generator.vue";
 
 export default {
-  name: "GeneratorPage",
+  name: "FactoryPage",
   components: { Header, Footer, GeneratedImages, Generator },
 };
 </script>

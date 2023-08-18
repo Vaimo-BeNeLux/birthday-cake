@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class='header__nav'>
+        <div v-if="showNav" class='header__nav'>
             <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
             <nav>
                 <li v-for="link in links" :key="link.id" @click="handleClick(link)">
@@ -14,28 +14,34 @@
 <script>
 export default {
     name: 'Header',
+    props: {
+      showNav: {
+        type: Boolean,
+        default: true
+      }
+    },
     data() {
         return {
             links: [
                 {
                     id: 1,
-                    name: 'Generator',
-                    link: '/generator'
+                    name: 'Factory',
+                    link: '/factory'
                 },
                 {
                     id: 2,
-                    name: 'Employees',
-                    link: '/employees'
+                    name: 'People',
+                    link: '/people'
                 },
                 {
                     id: 3,
-                    name: 'How to use',
+                    name: 'Guide',
                     link: ''
                 },
                 {
                     id: 4,
                     name: 'Logout',
-                    link: '/'
+                    link: '#logout'
                 },
             ]
         }
@@ -79,6 +85,6 @@ li {
     margin-right: 50px;
 }
 .header__vaimo-logo {
-    width: 200px;
+    width: 100px;
 }
 </style>

@@ -12,7 +12,7 @@ import Employees from '../components/Employees/Employees.vue';
 import { users } from '../lib/users';
 
 export default {
-    name: 'EmployeesPage',
+    name: 'PeoplePage',
     components: {
         Header,
         Footer,
@@ -26,5 +26,5 @@ export default {
 }
 </script>
 <style lang="css" scoped>
-    
+
 </style>

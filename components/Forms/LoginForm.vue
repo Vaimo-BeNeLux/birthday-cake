@@ -24,7 +24,7 @@ export default {
           e.preventDefault();
           if(this.checkPassword(this.password)) {
             localStorage.setItem('user-token', this.password);
-            window.location.href = '/generator';
+            window.location.href = '/factory';
             //this.$router.push('/generator');
           } else {
             alert('Invalid password');
@@ -36,7 +36,7 @@ export default {
       const userToken = localStorage.getItem('user-token');
       console.log('dd', userToken,this.checkPassword(userToken))
       if(this.checkPassword(userToken)) {
-        window.location.href = '/generator';
+        window.location.href = '/factory';
       }
     }
 }
