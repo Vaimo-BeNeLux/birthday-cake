@@ -22,9 +22,22 @@ export default {
 .root {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .form {
   align-self: center;
-  height: 85vh;
+  height: 75vh;
+  margin-top: 25vh;
+}
+.vaimo-logo {
+    width: 200px;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+.app-logo {
+    width: 400px;
+    align-self: center;
+    margin-bottom: 50px;
 }
 </styles>
