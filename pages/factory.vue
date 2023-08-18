@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div class="page page--factory">
     <Header />
     <Generator />
     <GeneratedImages />
@@ -19,7 +19,4 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-.root {
-  text-align: center;
-}
 </style>

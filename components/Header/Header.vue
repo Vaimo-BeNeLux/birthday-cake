@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" :class="{ 'with-nav': showNav }">
         <div v-if="showNav" class='header__nav'>
             <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
             <nav>
@@ -59,12 +59,16 @@ export default {
 <style lang="css" scoped>
 .header {
     margin: 0 auto 50px;
-    padding: 25px;
+    padding: 30px 15px;
     width: 100%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    min-height: 50px;
+}
+.header.with-nav {
+    justify-content: space-between;
 }
 .header__nav {
     display: flex;
@@ -75,9 +79,14 @@ export default {
     display: flex;
 }
 
+.header__nav nav a {
+  display: block;
+  line-height: 20px;
+  padding: 15px 15px;
+}
+
 li {
     list-style-type: none;
-    margin: 0 15px;
 }
 
 .header__app-logo {

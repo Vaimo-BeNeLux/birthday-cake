@@ -1,5 +1,5 @@
 <template>
-    <div class="employees-root">
+    <div class="page page--people">
         <Header />
         <Employees :items="users" />
         <Footer />

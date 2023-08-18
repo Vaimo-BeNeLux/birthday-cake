@@ -1,10 +1,10 @@
 <template>
-  <div class="root">
-    <Header />
-    <div class="form">
-      <img class="app-logo" src="../assets/images/App Logo.svg" />
-      <LoginForm />
-    </div>
+  <div class="page page--index">
+    <Header :show-nav="false" />
+<!--    <div class="form">-->
+<!--      <img class="app-logo" src="../assets/images/App Logo.svg" />-->
+<!--      <LoginForm />-->
+<!--    </div>-->
     <Footer />
   </div>
 </template>
@@ -20,35 +20,15 @@ export default {
 </script>
 
 <styles lang="css" scoped>
-.root {
+.page--index {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.header {
-  justify-content: flex-end!important;
-}
-.header__nav {
-  display:none!important;
 }
 .form {
   align-self: center;
   height: 75vh;
   margin-top: 25vh;
 }
-.vaimo-logo {
-    width: 200px;
-    position: absolute;
-    top: 25px;
-    right: 100px;
-}
-.app-logo {
-    width: 400px;
-    align-self: center;
-    margin-bottom: 50px;
-}
-.app-logo {
-  width: 300px;
-  margin: 30px 0;
-}
+
 </styles>
