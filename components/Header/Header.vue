@@ -20,12 +20,12 @@ export default {
                 {
                     id: 1,
                     name: 'Generator',
-                    link: ''
+                    link: '/generator'
                 },
                 {
                     id: 2,
                     name: 'Employees',
-                    link: ''
+                    link: '/employees'
                 },
                 {
                     id: 3,
@@ -35,7 +35,7 @@ export default {
                 {
                     id: 4,
                     name: 'Logout',
-                    link: ''
+                    link: '/'
                 },
             ]
         }
