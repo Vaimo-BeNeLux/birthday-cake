@@ -45,22 +45,31 @@ export default {
 <style lang="css" scoped>
 .header {
     margin: 0 auto;
-    padding: 0;
+    padding: 25px;
     width: 100%;
-    max-width: 1366px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.header,
-.header__nav,
+.header__nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .header__nav nav {
     display: flex;
 }
 
 li {
     list-style-type: none;
+    margin: 0 15px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+.header__app-logo {
+    width: 200px;
+    margin-right: 50px;
+}
+.header__vaimo-logo {
+    width: 200px;
 }
 </style>
