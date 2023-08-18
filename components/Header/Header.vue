@@ -1,10 +1,12 @@
 <template>
     <div class="header" :class="{ 'with-nav': showNav }">
         <div v-if="showNav" class='header__nav'>
-            <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
+            <a href="/">
+              <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
+            </a>
             <nav>
                 <li v-for="link in links" :key="link.id" @click="handleClick(link)">
-                    <a :href="link.link">{{ link.name }}</a>
+                    <a :href="link.link" :class="{'active': $route.path === link.link }">{{ link.name }}</a>
                 </li>
             </nav>
         </div>
@@ -58,7 +60,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .header {
-    margin: 0 auto 50px;
+    margin: 0 auto;
     padding: 30px 15px;
     width: 100%;
     max-width: 1200px;
@@ -83,6 +85,13 @@ export default {
   display: block;
   line-height: 20px;
   padding: 15px 15px;
+  opacity: 0.6;
+  transition: opacity 0.2s
+}
+
+.header__nav nav a.active,
+.header__nav nav a:hover {
+  opacity: 1;
 }
 
 li {

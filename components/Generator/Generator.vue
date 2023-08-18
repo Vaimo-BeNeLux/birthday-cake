@@ -62,7 +62,6 @@ export default {
 .generator form {
   display: flex;
   flex-direction: column;
-  margin-top: 25vh;
 }
 .dropdown {
   margin-bottom: 15px;

@@ -1,7 +1,10 @@
 <template>
     <div class="login-form">
+        <div class="login-form__logo">
+          <img src="../../assets/images/App Logo.svg" />
+        </div>
         <form @submit="handleSubmit">
-            <input v-model="password" class="password-input" type="password" placeholder="PASSWORD" />
+            <input v-model="password" class="password-input" type="password" placeholder="Password" />
             <button type="submit">Enter the Cake Factory</button>
         </form>
     </div>
@@ -43,11 +46,8 @@ export default {
 </script>
 <style lang="css">
 .login-form {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 360px;
+  margin: 0 auto;
 }
 .login-form form {
     display:flex;
@@ -55,5 +55,10 @@ export default {
 }
 .password-input {
     margin-bottom: 10px;
+}
+.login-form__logo {
+  padding: 0 30px;
+  margin-bottom: 30px;
+  height: 72px;
 }
 </style>

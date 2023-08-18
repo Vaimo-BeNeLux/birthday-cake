@@ -1,8 +1,10 @@
 <template>
   <div class="page page--factory">
     <Header />
-    <Generator />
-    <GeneratedImages />
+    <div class="page__content">
+      <Generator />
+      <GeneratedImages />
+    </div>
     <Footer />
   </div>
 </template>

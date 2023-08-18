@@ -14,7 +14,6 @@ export default {
     padding: 20px;
     font-size: 13px;
     text-align: center;
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;

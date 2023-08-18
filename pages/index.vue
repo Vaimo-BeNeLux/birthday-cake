@@ -1,10 +1,9 @@
 <template>
   <div class="page page--index">
     <Header :show-nav="false" />
-<!--    <div class="form">-->
-<!--      <img class="app-logo" src="../assets/images/App Logo.svg" />-->
-<!--      <LoginForm />-->
-<!--    </div>-->
+    <div class="page__content">
+      <LoginForm />
+    </div>
     <Footer />
   </div>
 </template>
@@ -25,10 +24,4 @@ export default {
   flex-direction: column;
   position: relative;
 }
-.form {
-  align-self: center;
-  height: 75vh;
-  margin-top: 25vh;
-}
-
 </styles>
