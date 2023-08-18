@@ -3,7 +3,7 @@
         <div class='header__nav'>
             <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
             <nav>
-                <li v-for="link in links" :key="link.id">
+                <li v-for="link in links" :key="link.id" @click="handleClick(link)">
                     <a :href="link.link">{{ link.name }}</a>
                 </li>
             </nav>
@@ -40,6 +40,14 @@ export default {
             ]
         }
     },
+    methods: {
+        handleClick(link) {
+            if (link.name === 'Logout') {
+              localStorage.removeItem('user-token');
+              window.location.href = '/';
+            }
+        }
+    }
 }
 </script>
 <style lang="css" scoped>
