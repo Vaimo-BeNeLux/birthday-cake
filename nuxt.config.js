@@ -15,6 +15,17 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push(
+        {
+          name: 'custom-home-route',
+          path: '/',
+          component: resolve(__dirname, 'pages/index.vue')
+        }
+      )
+    }
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
