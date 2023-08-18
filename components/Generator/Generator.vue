@@ -1,18 +1,20 @@
 <template>
-  <div class="generator">
-    <form onsubmit="handleSubmit">
-      <select class="dropdown">
-        <option
-          v-for="option in dropdownOptions"
-          :value="option.photo_link"
-          :key="option.id"
-          :onchange="getPhotoLink(option.photo_link)"
-        >
-          {{ option.name }} ({{ option.dob }})
-        </option>
-      </select>
-      <button type="submit">Generate</button>
-    </form>
+  <div class="generator container-mini">
+    <div class="generator__content">
+      <form onsubmit="handleSubmit">
+        <select class="dropdown">
+          <option
+            v-for="option in dropdownOptions"
+            :value="option.photo_link"
+            :key="option.id"
+            :onchange="getPhotoLink(option.photo_link)"
+          >
+            {{ option.name }} ({{ option.dob }})
+          </option>
+        </select>
+        <button type="submit">Generate</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -54,7 +56,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .generator {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

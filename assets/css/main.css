@@ -13,6 +13,10 @@ a {
   text-decoration: none;
   color: #fff;
 }
+form {
+  display: block;
+  width: 100%;
+}
 input,
 select {
     display: block;
@@ -44,4 +48,12 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px 60px;
+}
+.container-mini {
+  width: 360px;
+  margin: 0 auto;
+}
+.container-mini > div {
+  width: 100%;
+  box-sizing: border-box; 
 }

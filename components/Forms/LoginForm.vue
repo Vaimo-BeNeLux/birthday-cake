@@ -1,5 +1,5 @@
 <template>
-    <div class="login-form">
+    <div class="login-form container-mini">
         <div class="login-form__logo">
           <img src="../../assets/images/App Logo.svg" />
         </div>
@@ -28,26 +28,17 @@ export default {
           if(this.checkPassword(this.password)) {
             localStorage.setItem('user-token', this.password);
             window.location.href = '/factory';
-            //this.$router.push('/generator');
           } else {
             alert('Invalid password');
           }
           this.password = '';
         }
-    },
-    mounted() {
-      const userToken = localStorage.getItem('user-token');
-      console.log('dd', userToken,this.checkPassword(userToken))
-      if(this.checkPassword(userToken)) {
-        window.location.href = '/factory';
-      }
     }
 }
 </script>
 <style lang="css">
 .login-form {
-  max-width: 360px;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 .login-form form {
     display:flex;
