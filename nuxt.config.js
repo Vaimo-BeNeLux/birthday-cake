@@ -20,7 +20,7 @@ export default {
       routes.push(
         {
           name: 'custom-home-route',
-          path: '/',
+          path: '/index',
           component: resolve(__dirname, 'pages/index.vue')
         }
       )
