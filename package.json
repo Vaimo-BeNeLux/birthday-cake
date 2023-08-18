@@ -17,8 +17,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "sass": "^1.66.0",
-    "sass-loader": "^13.3.2"
+    "sass": "^1.66.0"
   },
   "engines": {
     "node": "^18.16.0"
