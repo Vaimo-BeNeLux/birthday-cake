@@ -18,5 +18,9 @@
   },
   "engines": {
     "node": "^18.16.0"
+  },
+  "scripts": {
+    "build": "[my-framework] build --output public"
   }
+  
 }
