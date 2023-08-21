@@ -1,7 +1,7 @@
 <template>
     <div class="header" :class="{ 'with-nav': showNav }">
         <div v-if="showNav" class='header__nav'>
-            <a href="/">
+            <a href="/factory">
               <img class="header__app-logo" src="../../assets/images/App Logo.svg" />
             </a>
             <nav>

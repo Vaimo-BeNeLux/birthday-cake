@@ -13,6 +13,19 @@ a {
   text-decoration: none;
   color: #fff;
 }
+a.dashed {
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 1px dashed;
+  margin-bottom: -2px;
+}
+a.accent {
+  color: #fabf2b;
+  transition: color 0.1s;
+}
+a.accent:hover {
+  color: #ffda7c;
+}
 form {
   display: block;
   width: 100%;
@@ -55,5 +68,24 @@ img {
 }
 .container-mini > div {
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  top: 2px;
+  width: .3em;
+  height: .35em;
+  position: relative;
+  border-radius: 50%;
+  border: 5px solid #fff9;
+  border-right-color: #fabf2b;
+  animation: rotateSpinner 800ms linear infinite;
+}
+
+@keyframes rotateSpinner {
+  to {
+    transform: rotate(360deg);
+  }
 }

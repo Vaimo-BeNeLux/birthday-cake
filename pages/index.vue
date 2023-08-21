@@ -3,7 +3,6 @@
     <Header :show-nav="false" />
     <div class="page__content">
       <LoginForm />
-      <button @click="send">Send</button>
     </div>
     <Footer />
   </div>

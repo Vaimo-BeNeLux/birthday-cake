@@ -1,7 +1,9 @@
 
 export const getItem = async (key) => {
   try {
-    return JSON.parse(localStorage.getItem(key))._value;
+    let item = localStorage.getItem(key)
+    if(item !== undefined) item = JSON.parse(item);
+    return item?._value || item;
   } catch (e) {
     console.log('error', e)
     return null
