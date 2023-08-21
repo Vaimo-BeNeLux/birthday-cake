@@ -1,25 +1,30 @@
 <template>
     <div class="employees">
-        <div class="employee" v-for="person in items" :key="person.id">
-            <div class="number">#{{ person.id }}</div>
+        <div class="employee" v-for="(person, index) in sortPeople(items)" :key="person.id">
+            <div class="number">#{{ index + 1 }}</div>
             <div class="dob">{{ person.bd }} {{ monthName(person.bm) }}</div>
             <div class="photo">
-              <img v-if="person.face" :src="person.photo_link" :alt="person.name">
-              <img v-else src="../../assets/images/cake.svg" :alt="person.name" class="cake">
+              <img v-if="person.face" :src="person.photo_link" :alt="person.first_name + ' ' + person.last_name">
+              <img v-else src="../../assets/images/cake.svg" :alt="person.first_name + ' ' + person.last_name" class="cake">
             </div>
-            <div class="name">{{ person.name }}</div>
+            <div class="name">{{ person.first_name + ' ' + person.last_name }}</div>
             <div class="controls"><a href="#edit" class="accent dashed" @click.prevent="edit(person)">Edit</a></div>
         </div>
     </div>
 </template>
 <script>
 import { monthName } from '~/composables/useDates';
+import { sortPeople } from '~/composables/useSort';
+
 export default {
     name: 'Employees',
     props: {
-        items: []
+        items: [],
     },
     methods: {
+      sortPeople(p) {
+        return sortPeople(p)
+      },
       monthName(m) {
         return monthName(m)
       },

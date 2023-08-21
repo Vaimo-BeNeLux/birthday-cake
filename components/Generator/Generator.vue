@@ -13,7 +13,7 @@
               :value="option"
               :key="option.id"
             >
-              {{ option.face ? '👤' : '🎂'  }} {{ option.name }} ({{ option.bd }} {{ monthName(option.bm) }})
+              {{ option.face ? '👤' : '🎂'  }} {{ option.first_name + ' ' + option.last_name }} ({{ option.bd }} {{ monthName(option.bm) }})
             </option>
           </select>
           <button type="submit" :disabled="submitDisabled">
