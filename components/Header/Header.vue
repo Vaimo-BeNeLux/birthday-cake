@@ -30,11 +30,11 @@ export default {
                     name: 'Factory',
                     link: '/factory'
                 },
-                {
-                    id: 2,
-                    name: 'People',
-                    link: '/people'
-                },
+                // {
+                //     id: 2,
+                //     name: 'People',
+                //     link: '/people'
+                // },
                 {
                   id: 3,
                   name: 'FAQ',
