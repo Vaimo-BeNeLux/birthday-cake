@@ -17,7 +17,9 @@
             </option>
           </select>
           <button type="submit" :disabled="submitDisabled">
-            <span v-if="submitDisabled" class="spinner"></span> Generate</button>
+            <span v-if="submitDisabled" class="spinner"></span> Generate
+          </button>
+          <div class="comment">If you wish to see your name here, please fill in <a href="https://forms.gle/QKQehyMchKRFisK67" class="accent" target="_blank">this form</a>.</div>
         </form>
       </div>
     </div>
@@ -149,5 +151,10 @@ export default {
 button[disabled] {
   background: #cca952;
   color: #fff;
+}
+.comment {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 15px;
 }
 </style>
