@@ -36,12 +36,17 @@ export default {
                     link: '/people'
                 },
                 {
-                    id: 3,
-                    name: 'Guide',
-                    link: ''
+                  id: 3,
+                  name: 'FAQ',
+                  link: '/faq'
                 },
                 {
-                    id: 4,
+                  id: 4,
+                  name: 'Help',
+                  link: '/help'
+                },
+                {
+                    id: 5,
                     name: 'Logout',
                     link: '#logout'
                 },

@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
-      <div style="margin-bottom: 10px"><span style="color: #e88181;">Experiencing issues?</span> If your image is not generated more than 10 minutes and refresh of the page does not help - please clear the LocalStorage</div>
-        <div style="opacity: 0.7">Designed with fun by Vaimo Benelux @ Vaimo AI Hackathon 2023</div>
+      <div style="margin-bottom: 10px"><span>💥 Experiencing issues?</span> - Visit our <a href="/help" class="accent">Help</a> page</div>
+        <div style="opacity: 0.7">Designed with fun by Vaimo Benelux @ Vaimo AI Hackathon 2023 | <a href="https://whimsical.com/perfect-birthday-cake-ai-hackathon-ideas-Es7StfLixq4YZMhjkNo84Y" class="accent" target="_blank">Idea</a> | <a href="/credits" class="accent">Credits</a></div>
     </div>
 </template>
 <script>
