@@ -20,6 +20,9 @@
       <h2>Why there is only a cake without face for some people?</h2>
       <p>Some people forbid their photos from being used for AI processing. In these cases, we will generate only the cake image.</p>
 
+      <h2>Birthday dates are incorrect for some people!</h2>
+      <p>They are quite random at the moment. We will fix it soon ;)</p>
+
       <h2>I have my name in the list, my there is a cake generated without my face. How to add my face?</h2>
       <p>This is because your profile is marked as "I forbid to use my photo for AI". Please <a href="/help" class="accent">contact us</a> to change this setting.</p>
 

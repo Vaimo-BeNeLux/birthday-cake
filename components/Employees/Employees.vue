@@ -3,11 +3,11 @@
         <div class="employee" v-for="(person, index) in sortPeople(items)" :key="person.id">
             <div class="number">#{{ index + 1 }}</div>
             <div class="dob">{{ person.bd }} {{ monthName(person.bm) }}</div>
-            <div class="photo">
-              <img v-if="person.face" :src="person.photo_link" :alt="person.first_name + ' ' + person.last_name">
-              <img v-else src="../../assets/images/cake.svg" :alt="person.first_name + ' ' + person.last_name" class="cake">
-            </div>
-            <div class="name">{{ person.first_name + ' ' + person.last_name }}</div>
+<!--            <div class="photo">-->
+<!--              <img v-if="person.face" :src="person.photo_link" :alt="person.first_name + ' ' + person.last_name">-->
+<!--              <img v-else src="../../assets/images/cake.svg" :alt="person.first_name + ' ' + person.last_name" class="cake">-->
+<!--            </div>-->
+            <div class="name">{{ person.face ? "👤" : "🎂" }} {{ person.first_name + ' ' + person.last_name }}</div>
             <div class="controls"><a href="#edit" class="accent dashed" @click.prevent="edit(person)">Edit</a></div>
         </div>
     </div>
