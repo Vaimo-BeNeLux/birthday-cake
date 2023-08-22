@@ -1,6 +1,6 @@
 <template>
     <div class="employees">
-        <div class="employee" v-for="(person, index) in sortPeople(items)" :key="person.id">
+        <div class="employee" v-for="(person, index) in sortedPeople" :key="person.id">
             <div class="number">#{{ index + 1 }}</div>
             <div class="dob">{{ person.bd }} {{ monthName(person.bm) }}</div>
 <!--            <div class="photo">-->
@@ -20,6 +20,11 @@ export default {
     name: 'Employees',
     props: {
         items: [],
+    },
+    computed: {
+        sortedPeople() {
+            return sortPeople(this.items);
+        },
     },
     methods: {
       sortPeople(p) {
