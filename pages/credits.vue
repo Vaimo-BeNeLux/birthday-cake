@@ -2,8 +2,8 @@
   <div class="page page--credits">
     <Header />
     <div class="page__content" style="width:100%">
-      <h2>Benelux Cake Forces team</h2>
-      <p>This people made an effort to make Birthdays fun again!</p>
+      <h2>Benelux Cake Forces</h2>
+      <p>These people made an effort to make Birthdays fun again!</p>
       <div class="grid">
         <div class="grid__item">
           <img class="photo" src="../assets/credits/olha.png" alt="">
