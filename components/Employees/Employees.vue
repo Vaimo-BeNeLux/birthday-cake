@@ -1,7 +1,7 @@
 <template>
     <div class="employees">
         <div class="employee" v-for="(person, index) in sortedPeople" :key="person.id">
-            <div class="number">#{{ index + 1 }}</div>
+            <div class="number">#{{ person.id }}</div>
             <div class="dob">{{ person.bd }} {{ monthName(person.bm) }}</div>
 <!--            <div class="photo">-->
 <!--              <img v-if="person.face" :src="person.photo_link" :alt="person.first_name + ' ' + person.last_name">-->
