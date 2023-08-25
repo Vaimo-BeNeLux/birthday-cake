@@ -1,21 +1,27 @@
+  import { queryByCollection } from '../server/lib/firestore';
 
-export const getItem = async (key) => {
-  try {
-    let item = localStorage.getItem(key)
-    if(item !== undefined) item = JSON.parse(item);
-    return item?._value || item;
-  } catch (e) {
-    console.log('error', e)
-    return null
+  export const getItems = async (collection) => {
+    try {
+      const response = await queryByCollection(collection);
+      const data = response.data;
+      return data;
+    } catch (e) {
+      console.error('error getting data: ', e)
+      return null
+    }
   }
-}
+  
+  // export const setItem = async(collection, data) => {   
+  //   try {
+  //   } catch (e) {
+  //     console.error('error setting data: ', e);
+  //   }
+  // }
 
-export const setItem = async(key, value) =>{
-  localStorage.setItem(key, JSON.stringify({ _value: value }));
-  return true;
-}
-
-export const removeItem = async (key) => {
-  localStorage.removeItem(key);
-  return true;
-}
+  // export const removeItem = async(collection, person) => {
+  //   try {
+      
+  //   } catch (e) {
+  //     console.error('error removing data: ', e)
+  //   }
+  // }

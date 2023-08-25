@@ -10,29 +10,34 @@
     </div>
 </template>
 <script>
+import { ref } from "@nuxtjs/composition-api";
+
 export default {
     name: 'LoginForm',
-    data() {
-        return {
-          accessPassword: 'vaimo',
-          password: ''
+    setup() {
+      const accessPassword = 'vaimo';
+      const password = ref('');
+
+      const checkPassword = (pw) => {
+        // TODO: has to be replaced with env var or Backend password check
+        return pw === accessPassword;
+      };
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if(checkPassword(password.value)) {
+          localStorage.setItem('user-token', password.value);
+          window.location.href = '/factory';
+        } else {
+          alert('Invalid password');
         }
-    },
-    methods: {
-        checkPassword(password) {
-          // TODO: has to be replaced with env var or Backend password check
-          return password === this.accessPassword;
-        },
-        handleSubmit(e) {
-          e.preventDefault();
-          if(this.checkPassword(this.password)) {
-            localStorage.setItem('user-token', this.password);
-            window.location.href = '/factory';
-          } else {
-            alert('Invalid password');
-          }
-          this.password = '';
-        }
+        password.value = '';
+      }
+
+      return {
+        handleSubmit,
+        password
+      }
     }
 }
 </script>
