@@ -46,7 +46,8 @@ select {
     outline: none;
     border: none;
 }
-button {
+button,
+.btn {
     padding: 10px;
     background-color: #fabf2b;
     border: none;
@@ -72,7 +73,13 @@ img {
 .page__content p {
   font-size: 14px;
 }
-
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 32px;
+  color: #fabf2b;
+  font-weight: 700;
+}
 .container-mini {
   width: 360px;
   margin: 0 auto;

@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// configuration for firebase
+// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCsxYxi9zlUPuvoShKjTrPYP0BjU4qFCiM",
   authDomain: "cake-force.firebaseapp.com",

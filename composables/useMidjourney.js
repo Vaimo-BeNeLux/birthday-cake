@@ -44,10 +44,10 @@ export const imaginePerson = async (person) => {
   if(person.face) {
     const photo = person.photo_link ? person.photo_link + ' ' : '';
     const prompt = photo + personPrompts[0] + uniqueCake();
-    console.log(prompt);
+    
     return imagine(prompt);
   } else {
-    const uniquePart = ', perfect birthday cake for ' + person.name
+    const uniquePart = ', perfect birthday cake for ' + person.first_name + ' ' + person.last_name
     return imagine(cakePrompts[0] + uniqueCake() + uniquePart);
   }
 }
@@ -57,7 +57,6 @@ export const imagine = async (prompt) => {
   const data = {
     "prompt": prompt || examplePrompt,
   };
-
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -68,8 +67,10 @@ export const imagine = async (prompt) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
+    const imgData = await response.json();
+    console.log(imgData);
 
-    return await response.json();
+    return imgData;
   } catch (e) {
     return e;
   }

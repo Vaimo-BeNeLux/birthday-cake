@@ -6,10 +6,12 @@
     </div>
 </template>
 <script>
+import { ref, onMounted } from '@nuxtjs/composition-api';
 import Header from '../components/Header/Header.vue';
 import Footer from '../components/Footer/Footer.vue';
 import Employees from '../components/Employees/Employees.vue';
-import { users } from '../lib/users';
+import { getItems } from '../composables/useDatabase';
+// import { users } from '../lib/users';
 
 export default {
     name: 'PeoplePage',
@@ -18,11 +20,17 @@ export default {
         Footer,
         Employees
     },
-    data() {
+    setup() {
+        const users = ref([]);
+
+        onMounted(async () => {
+            users.value = await getItems('people');
+        })
+
         return {
-            users: users
+            users
         }
-    },
+    }
 }
 </script>
 <style lang="css" scoped>
